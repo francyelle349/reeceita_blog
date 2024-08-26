@@ -2,7 +2,7 @@
 <html lang="en">
 
 <?php
-require_once "backend/connecting.php";
+require_once "connecting.php";
 
 if(isset($_POST["titulo"]) && isset($_POST["conteudo"]) && isset($_POST["imagem"])){
     $Titulo = mysqli_real_escape_string($conn, $_POST['titulo']);
