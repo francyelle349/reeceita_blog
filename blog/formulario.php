@@ -8,9 +8,30 @@
     <title>Adicionar Receita</title>
 </head>
 <body>
+
+<div class="text-center">
+        <img src="logo.png" alt="Logo" class="img-fluid " style="max-width: 200px;">
+      </div>
+      
+     <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light ">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
+      <div class="navbar-nav mx-auto gap-3">
+   
+        <a class="nav-item nav-link fs-5 fw-bold" href="">Receita Nova</a>
+    
+      </div>
+    </div>
+    </nav>
+
+    
+</div>
     
 <form action="adddata.php" method="post" class="w-50 mx-auto mt-5">
-    <h1>Receita Nova</h1>
+
 
     <div class="mb-3">
         <label for="titulo" class="form-label">Título</label>
@@ -29,7 +50,7 @@
 
     <img src="" alt="" id="imageContainer" class="img-fluid" style="display: none;">
 
-    <button class="btn btn-primary btn-lg mt-3" type="submit" name="submit" id="submit">Adicionar Receita</button>
+    <button class="btn btn-info btn-lg mt-3" type="submit" name="submit" id="submit">Adicionar Receita</button>
 </form>
 
 <script>

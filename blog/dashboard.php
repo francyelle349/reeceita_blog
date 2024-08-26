@@ -16,8 +16,29 @@
 
 </head>
 <body>
+<div class="text-center">
+        <img src="logo.png" alt="Logo" class="img-fluid " style="max-width: 200px;">
+      </div>
+      
+     <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light ">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
+      <div class="navbar-nav mx-auto gap-3">
+        <a class="nav-item nav-link fs-5 fw-bold" href="">Todas Minhas Receitas</a>
+        
+        <a class="nav-item nav-link fs-5 " href="http://localhost/crud_receita/blog/homepage.php">Homepage</a>
+    
+      </div>
+    </div>
+    </nav>
+
+    
+</div> <
     <section style="margin: 50px 0;">
-        <h1 style="text-align: center; margin: 50px 0;">Receitas</h1>
+     
 
         <div class="container">
 
@@ -59,7 +80,7 @@
                     <td><img src="<?php echo $Imagem; ?>" style="max-width: 100px; height: auto;" alt="Imagem da receita"></td>
 
                     <td><?php echo $Data?></td>
-                    <td><a href="updateData.php?id=<?php echo $Id; ?>" class="btn btn-primary">Edit</a></td>
+                    <td><a href="updateData.php?id=<?php echo $Id; ?>" class="btn btn-info">Edit</a></td>
                     <td><a href="deletedata.php?id=<?php echo $Id; ?>" class="btn btn-danger">Delete</a></td>
                     
                 </tr>
@@ -80,7 +101,7 @@
     <form action="formulario.php">
     <div class="d-flex justify-content-end">
   <!-- other content -->
-  <button class="btn btn-primary btn-lg" type="submit">Adicione uma Nova Receita</button>
+  <button class="btn btn-info btn-lg" type="submit">Adicione uma Nova Receita</button>
 </div>
     </form>
      

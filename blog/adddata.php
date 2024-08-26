@@ -10,7 +10,7 @@ if(isset($_POST['submit'])){
     if($Titulo != "" && $Conteudo != "" && $Imagem != "" ){
         $sql = "INSERT INTO posts (`title`, `content`, `image_path`, `created_at`) VALUES ('$Titulo', '$Conteudo', '$Imagem', CURRENT_DATE)";
         if (mysqli_query($conn, $sql)) {
-            header("location: index.php");
+            header("location: dashboard.php");
         } else {
              echo "Something went wrong. Please try again later.";
         }

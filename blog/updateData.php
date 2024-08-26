@@ -2,7 +2,7 @@
 <html lang="en">
 
 <?php
-require_once "connecting.php";
+require_once "backend/connecting.php";
 
 if(isset($_POST["titulo"]) && isset($_POST["conteudo"]) && isset($_POST["imagem"])){
     $Titulo = mysqli_real_escape_string($conn, $_POST['titulo']);
@@ -11,7 +11,7 @@ if(isset($_POST["titulo"]) && isset($_POST["conteudo"]) && isset($_POST["imagem"
 
     $sql = "UPDATE posts SET `title`= '$Titulo', `content`= '$Conteudo', `image_path`= '$Imagem' WHERE id= ".$_GET["id"];
     if (mysqli_query($conn, $sql)) {
-        header("location: index.php");
+        header("location: dashboard.php");
         exit();
     } else {
         echo "Something went wrong. Please try again later: " . mysqli_error($conn);
