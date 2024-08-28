@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
+    <link rel="stylesheet" href="/blog/styel_homepage.css">
 
 
 <!-- CSS ONLY-->
@@ -29,7 +30,7 @@
       <div class="navbar-nav mx-auto gap-3">
         <a class="nav-item nav-link fs-5 fw-bold" href="">Todas Minhas Receitas</a>
         
-        <a class="nav-item nav-link fs-5 " href="http://localhost/crud_receita/blog/homepage.php">Homepage</a>
+        <a class="nav-item nav-link fs-5 " href="/blog/homepage.php">Homepage</a>
     
       </div>
     </div>
@@ -108,5 +109,8 @@
 
     </section>
 
+<footer class="bg-light text-center py-3">
+    <p class="mb-0">© 2024 Blog. Todos os direitos reservados.</p>
+</footer>
 </body>
 </html>

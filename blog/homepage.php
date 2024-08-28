@@ -18,9 +18,9 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="collapse navbar-collapse justify-content-center">
         <div class="navbar-nav gap-3">
-            <a class="nav-item nav-link fs-5 fw-bold" href="#">Receitas</a>
-            <a class="nav-item nav-link fs-5 fw-bold" href="#">Sobre</a>
-            <a class="nav-item nav-link fs-5 fw-bold" href="#">Contato</a>
+            <a class="nav-item nav-link fs-5 fw-bold" href="/blog/about.php">Sobre</a>
+            <a class="nav-item nav-link fs-5 fw-bold" href="/blog/contato.php">Contato</a>
+            <a class="nav-item nav-link fs-5 fw-bold" href="/blog/dashboard.php">Dashboard</a>
         </div>
     </div>
 </nav>
