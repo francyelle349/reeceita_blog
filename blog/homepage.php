@@ -18,9 +18,13 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="collapse navbar-collapse justify-content-center">
         <div class="navbar-nav gap-3">
-            <a class="nav-item nav-link fs-5 fw-bold" href="/blog/about.php">Sobre</a>
-            <a class="nav-item nav-link fs-5 fw-bold" href="/blog/contato.php">Contato</a>
-            <a class="nav-item nav-link fs-5 fw-bold" href="/blog/dashboard.php">Dashboard</a>
+        <a class="nav-item nav-link fs-4" href="http://localhost/crud_receita/blog/homepage.php">Receitas</a>
+
+        <a class="nav-item nav-link fs-4 " href="http://localhost/crud_receita/blog/about.php">Sobre</a>
+        <a class="nav-item nav-link fs-4 " href="http://localhost/crud_receita/blog/contato.php">Contato</a>
+
+        <a class="nav-item nav-link fs-4 " href="http://localhost/crud_receita/blog/login.php">Login</a>
+          
         </div>
     </div>
 </nav>
@@ -50,7 +54,7 @@
                         <img src="' . $item['image_path'] . '" class="d-block w-100" alt="...">
                         <div class="card-body text-center">
                             <h5 class="card-title">' . $item['title'] . '</h5>
-                            <a href="recipe.php?id=' . $item['id'] . '" class="btn btn-primary">Leia mais >></a>
+                            <a href="recipe.php?id=' . $item['id'] . '" class="btn btn-info">Leia mais >></a>
                         </div>
                       </div>';
             }
@@ -73,8 +77,8 @@
 </div>
 
 <!-- Rodapé -->
-<footer class="bg-light text-center py-3">
-    <p class="mb-0">© 2024 Blog. Todos os direitos reservados.</p>
+<footer class="bg-light text-dark text-center py-3 mt-4">
+    <p class="mb-0">© 2024 Blog de Receitas. Todos os direitos reservados.</p>
 </footer>
 
 </body>

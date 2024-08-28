@@ -28,19 +28,20 @@
     </button>
     <div class="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
       <div class="navbar-nav mx-auto gap-3">
-        <a class="nav-item nav-link fs-5 fw-bold" href="">Todas Minhas Receitas</a>
         
-        <a class="nav-item nav-link fs-5 " href="/blog/homepage.php">Homepage</a>
+        <a class="nav-item nav-link fs-4" href="http://localhost/crud_receita/blog/homepage.php">Homepage</a>
     
       </div>
     </div>
     </nav>
 
-    
-</div> <
+   
+</div> 
     <section style="margin: 50px 0;">
      
-
+    <div class="container">
+      <h1  style="margin: 30px 30px;">Todas as Receitas </h1>
+    </div>
         <div class="container">
 
          <table class="table table-light table-bordered" >
