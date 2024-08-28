@@ -35,7 +35,7 @@ if (isset($_GET['id'])) {
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-    
+
 <div class="text-center mt-3">
     <img src="logo.png" alt="Logo" class="img-fluid" style="max-width: 100px;">
 </div>
@@ -44,9 +44,9 @@ if (isset($_GET['id'])) {
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="collapse navbar-collapse justify-content-center">
         <div class="navbar-nav gap-3">
-            <a class="nav-item nav-link fs-5 fw-bold" href="#">Receitas</a>
-            <a class="nav-item nav-link fs-5 fw-bold" href="#">Sobre</a>
-            <a class="nav-item nav-link fs-5 fw-bold" href="#">Contato</a>
+            <a class="nav-item nav-link fs-5 fw-bold" href="/blog/about.php">Sobre</a>
+            <a class="nav-item nav-link fs-5 fw-bold" href="/blog/contato.php">Contato</a>
+            <a class="nav-item nav-link fs-5 fw-bold" href="/blog/dashboard.php">Dashboard</a>
         </div>
     </div>
 </nav>
