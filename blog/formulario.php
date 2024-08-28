@@ -10,29 +10,22 @@
 <body>
 
 <div class="text-center">
-        <img src="logo.png" alt="Logo" class="img-fluid " style="max-width: 200px;">
-      </div>
-      
-     <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-light ">
+    <img src="logo.png" alt="Logo" class="img-fluid " style="max-width: 200px;">
+</div>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light ">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+        <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
-      <div class="navbar-nav mx-auto gap-3">
-   
-        <a class="nav-item nav-link fs-5 fw-bold" href="">Receita Nova</a>
-    
-      </div>
+        <div class="navbar-nav mx-auto gap-3">
+            <a class="nav-item nav-link fs-5 fw-bold" href="">Receita Nova</a>
+        </div>
     </div>
-    </nav>
+</nav>
 
-    
-</div>
-    
-<form action="adddata.php" method="post" class="w-50 mx-auto mt-5">
-
-
+<form action="adddata.php" method="post" enctype="multipart/form-data" class="w-50 mx-auto mt-5">
     <div class="mb-3">
         <label for="titulo" class="form-label">Título</label>
         <input type="text" name="titulo" id="titulo" class="form-control">
@@ -44,11 +37,16 @@
     </div>
 
     <div class="mb-3">
-        <label for="imagem" class="form-label">Imagem</label>
+        <label for="imagem" class="form-label">Imagem (URL)</label>
         <input type="text" name="imagem" id="imagem" class="form-control">
     </div>
 
-    <img src="" alt="" id="imageContainer" class="img-fluid" style="display: none;">
+    <div class="mb-3">
+        <label for="nova_imagem" class="form-label">Ou selecione uma nova imagem</label>
+        <input type="file" name="nova_imagem" id="nova_imagem" class="form-control">
+    </div>
+
+    <img src="" alt="Image preview" id="imageContainer" class="img-fluid" style="display: none;">
 
     <button class="btn btn-info btn-lg mt-3" type="submit" name="submit" id="submit">Adicionar Receita</button>
 </form>

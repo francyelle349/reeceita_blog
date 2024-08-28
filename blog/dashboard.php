@@ -75,17 +75,15 @@
                         
                 ?>
 
-                <tr>
-                    <td><?php echo $Id; ?></td>
-                    <td><?php echo $Titulo; ?></td>
-                    <td><?php echo $Conteudo ?></td>
-                    <td><img src="<?php echo $Imagem; ?>" style="max-width: 100px; height: auto;" alt="Imagem da receita"></td>
-
-                    <td><?php echo $Data?></td>
-                    <td><a href="updateData.php?id=<?php echo $Id; ?>" class="btn btn-info">Edit</a></td>
-                    <td><a href="deletedata.php?id=<?php echo $Id; ?>" class="btn btn-danger">Delete</a></td>
-                    
-                </tr>
+                  <tr>
+                      <td><?php echo $Id; ?></td>
+                      <td><?php echo $Titulo; ?></td>
+                      <td><?php echo $Conteudo ?></td>
+                      <td><img src="<?php echo $Imagem; ?>" style="max-width: 100px; height: auto;" alt="Imagem da receita"></td>
+                      <td><?php echo date('d/m/Y', strtotime($Data)); ?></td>
+                      <td><a href="updateData.php?id=<?php echo $Id; ?>" class="btn btn-info">Edit</a></td>
+                      <td><a href="deletedata.php?id=<?php echo $Id; ?>" class="btn btn-danger">Delete</a></td>
+                  </tr>
 
                 <?php
                         }

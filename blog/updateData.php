@@ -4,10 +4,25 @@
 <?php
 require_once "connecting.php";
 
-if(isset($_POST["titulo"]) && isset($_POST["conteudo"]) && isset($_POST["imagem"])){
+if(isset($_POST["titulo"]) && isset($_POST["conteudo"])){
     $Titulo = mysqli_real_escape_string($conn, $_POST['titulo']);
     $Conteudo = mysqli_real_escape_string($conn, $_POST['conteudo']);
-    $Imagem = mysqli_real_escape_string($conn, $_POST['imagem']);
+
+    // Verificar se uma nova imagem foi enviada
+    if(isset($_FILES["nova_imagem"]) && $_FILES["nova_imagem"]["error"] == 0){
+        $imagem_nome = basename($_FILES["nova_imagem"]["name"]);
+        $imagem_diretorio = "uploads/" . $imagem_nome;
+
+        // Move a imagem para o diretório de uploads
+        if(move_uploaded_file($_FILES["nova_imagem"]["tmp_name"], $imagem_diretorio)){
+            $Imagem = $imagem_diretorio;
+        } else {
+            echo "Erro ao carregar a imagem.";
+        }
+    } else {
+        // Mantém a imagem atual se nenhuma nova imagem for enviada
+        $Imagem = $_POST['imagem'];
+    }
 
     $sql = "UPDATE posts SET `title`= '$Titulo', `content`= '$Conteudo', `image_path`= '$Imagem' WHERE id= ".$_GET["id"];
     if (mysqli_query($conn, $sql)) {
@@ -39,7 +54,7 @@ if ($result = $conn->query($sql_query)) {
         $Imagem = $row['image_path'];
 ?>
 
-<form action="updateData.php?id=<?php echo $Id; ?>" method="post" class="w-50 mx-auto mt-5">
+<form action="updateData.php?id=<?php echo $Id; ?>" method="post" enctype="multipart/form-data" class="w-50 mx-auto mt-5">
     <h1>Editar Receita</h1>
 
     <div class="mb-3">
@@ -53,11 +68,17 @@ if ($result = $conn->query($sql_query)) {
     </div>
 
     <div class="mb-3">
-        <label for="imagem" class="form-label">Imagem</label>
+        <label for="imagem" class="form-label">Imagem (URL)</label>
         <input type="text" name="imagem" id="imagem" class="form-control" value="<?php echo htmlspecialchars($Imagem); ?>">
     </div>
 
-    <img src="<?php echo htmlspecialchars($Imagem); ?>" alt="Image preview" id="imageContainer" class="img-fluid" style="display: <?php echo $Imagem ? 'block' : 'none'; ?>;">
+    <div class="mb-3">
+        <label for="nova_imagem" class="form-label">Ou selecione uma nova imagem</label>
+        <input type="file" name="nova_imagem" id="nova_imagem" class="form-control">
+    </div>
+
+    <td><img src="<?php echo htmlspecialchars($Imagem); ?>" style="max-width: 100px; height: auto;" alt="Imagem da receita"></td>
+
 
     <button class="btn btn-primary btn-lg mt-3" type="submit" name="submit" id="submit">Atualizar Receita</button>
 </form>
