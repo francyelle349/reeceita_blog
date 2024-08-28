@@ -31,7 +31,7 @@
         <?php
         require_once "connecting.php";
 
-        $sql_query = "SELECT title, image_path FROM posts LIMIT 6;";
+        $sql_query = "SELECT id, title, image_path FROM posts LIMIT 6;";
         $result = $conn->query($sql_query);
         $active_class = 'active';
         $items_per_slide = 2;
@@ -50,7 +50,7 @@
                         <img src="' . $item['image_path'] . '" class="d-block w-100" alt="...">
                         <div class="card-body text-center">
                             <h5 class="card-title">' . $item['title'] . '</h5>
-                            <a href="#" class="btn btn-primary">Leia mais >></a>
+                            <a href="recipe.php?id=' . $item['id'] . '" class="btn btn-primary">Leia mais >></a>
                         </div>
                       </div>';
             }
