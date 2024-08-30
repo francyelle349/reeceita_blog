@@ -31,7 +31,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 
     // Inserir os dados no banco de dados
-    $sql = "INSERT INTO posts (title, content, image_path) VALUES ('$titulo', '$conteudo', '$image_path')";
+    $sql = "INSERT INTO posts (title, content, image_path, `created_at`) VALUES ('$titulo', '$conteudo', '$image_path', CURRENT_DATE)";
 
     if (mysqli_query($conn, $sql)) {
         echo "Receita adicionada com sucesso!";
